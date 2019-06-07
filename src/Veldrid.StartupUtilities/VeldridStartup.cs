@@ -55,6 +55,10 @@ namespace Veldrid.StartupUtilities
             {
                 flags |= SDL_WindowFlags.Shown;
             }
+            if (windowCI.HiDpi)
+            {
+                flags |= SDL_WindowFlags.AllowHighDpi;
+            }
             Sdl2Window window = new Sdl2Window(
                 windowCI.WindowTitle,
                 windowCI.X,
